@@ -9,6 +9,7 @@ VN_COL = 'VN'
 EBITDA_COL = 'EBITDA'
 ANO_COL = 'ANO'
 TURNOVER = 'Turnover'
+HEADCOUNT ='HEADCOUNT'
 CRESCIMENTO_VN = 'Crescimento_VN'
 CRESCIMENTO_HEADCOUNT = 'Crescimento_Headcount'
 MARGEN_EBITDA = 'Margem_EBITDA'
@@ -24,14 +25,14 @@ except FileNotFoundError:
 
 # Example new data for prediction
 new_data = pd.DataFrame({
-    "ANO": [2025],
-    "VN": [600000],
-    "EBITDA": [80000],
-    "HEADCOUNT": [7],
-    "Turnover": [0.15],
-    "Crescimento_VN": [((600000 / 500000) - 1) * 100],
-    "Crescimento_Headcount": [0],
-    "Margem_EBITDA": [(80000 / 600000) * 100]
+    ANO_COL: [2025],
+    VN_COL: [600000],
+    EBITDA_COL: [80000],
+    HEADCOUNT: [7],
+    TURNOVER: [0.15],
+    CRESCIMENTO_VN: [((600000 / 500000) - 1) * 100],
+    CRESCIMENTO_HEADCOUNT: [0],
+    MARGEN_EBITDA: [(80000 / 600000) * 100]
 })
 
 
@@ -39,8 +40,8 @@ new_data = pd.DataFrame({
 new_data[UN_COL] = 0
 
 # Drop the 'HEADCOUNT' column, as it is the target in the training data
-if 'HEADCOUNT' in new_data.columns:
-    new_data = new_data.drop(columns=['HEADCOUNT'])
+if HEADCOUNT in new_data.columns:
+    new_data = new_data.drop(columns=[HEADCOUNT])
 
 # Verify that all required feature columns are present in the new data
 missing_cols = [col for col in features if col not in new_data.columns]
