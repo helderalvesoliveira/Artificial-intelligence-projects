@@ -1,0 +1,5 @@
+.env
+chunked_data.csv
+scraped_data.csv
+output.json
+venv

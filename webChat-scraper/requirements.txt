@@ -1,0 +1,16 @@
+scrapy
+beautifulsoup4
+requests
+tqdm
+pandas
+openai
+python-dotenv
+langchain_core
+langchain_groq
+langchain-ollama
+langchain_community
+langchain_huggingface
+streamlit
+faiss-cpu
+tiktoken
+langchain-text-splitters
