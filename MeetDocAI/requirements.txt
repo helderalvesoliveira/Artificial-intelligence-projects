@@ -1,0 +1,13 @@
+streamlit
+crewai
+sentence-transformers
+PyMuPDF
+python-docx
+pandas
+chromadb
+resend
+crewai[tools]
+python-dotenv
+langchain-ollama
+langchain_chroma
+unstructured
