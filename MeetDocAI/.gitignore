@@ -1,5 +1,0 @@
-venv
-db/*
-temp_uploads/*
-.env
-__pycache__
